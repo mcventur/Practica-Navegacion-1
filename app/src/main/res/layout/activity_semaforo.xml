@@ -6,4 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".semaforo.SemaforoActivity">
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
