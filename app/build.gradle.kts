@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.mpd.pmdm.practicanavegacion1"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.mpd.pmdm.practicanavegacion1"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures{
+        viewBinding = true
     }
 }
 

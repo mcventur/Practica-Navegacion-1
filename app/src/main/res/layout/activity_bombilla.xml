@@ -8,6 +8,7 @@
     tools:context=".bombilla.BombillaActivity"
     android:orientation="vertical">
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/img_bombilla_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
@@ -15,6 +16,7 @@
         tools:layout="@layout/fragment_img_bombilla"
         />
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/botones_bombilla_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
