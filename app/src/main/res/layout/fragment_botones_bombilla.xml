@@ -27,5 +27,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_encender"
-        app:layout_constraintTop_toTopOf="@+id/btn_encender" />
+        app:layout_constraintTop_toTopOf="@+id/btn_encender"
+        android:enabled="false"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

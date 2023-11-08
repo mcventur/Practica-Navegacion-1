@@ -37,15 +37,21 @@ class BotonesBombillaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.btnEncender.setOnClickListener {
-            interruptorListener.onButtonClick(it.id)
+            botonPulsado(it)
+            binding.btnApagar.isEnabled = true
         }
         binding.btnApagar.setOnClickListener {
-            interruptorListener.onButtonClick(it.id)
+            botonPulsado(it)
+            binding.btnEncender.isEnabled = true
         }
     }
 
-
+    private fun botonPulsado(it: View) {
+        interruptorListener.onButtonClick(it.id)
+        it.isEnabled = !it.isEnabled
+    }
 
 
 }

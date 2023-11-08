@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
 import com.mpd.pmdm.practicanavegacion1.R
+import com.mpd.pmdm.practicanavegacion1.bombilla.model.Bombilla
 import com.mpd.pmdm.practicanavegacion1.databinding.FragmentImgBombillaBinding
 
 /**
@@ -17,6 +18,8 @@ class ImgBombillaFragment : Fragment() {
     var _binding: FragmentImgBombillaBinding? = null
     val binding get() = _binding!!
 
+    val bombilla = Bombilla()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,15 +29,28 @@ class ImgBombillaFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        actualizarImagenBombilla()
+    }
+
     /**
      * Actualiza la imagen de la bombilla a partir del id del botón pulsado recibido
      */
-    fun actualizarEstadoBombilla(@IdRes botonPulsado: Int){
-        val imgBombillaResource = when(botonPulsado){
-            R.id.btn_encender -> R.drawable.encendida
-            else -> R.drawable.apagada
+    fun cambiarEstadoBombilla(@IdRes botonPulsado: Int){
+        when(botonPulsado){
+            R.id.btn_encender -> bombilla.encender()
+            else -> bombilla.apagar()
         }
 
-        binding.imgBombilla.setImageResource(imgBombillaResource)
+        actualizarImagenBombilla()
+    }
+
+    private fun actualizarImagenBombilla() {
+        val bombillaImgResource =
+            if (bombilla.estaEncendida()) R.drawable.encendida
+            else R.drawable.apagada
+
+        binding.imgBombilla.setImageResource(bombillaImgResource)
     }
 }
