@@ -1,12 +1,7 @@
 package com.mpd.pmdm.practicanavegacion1.bombilla.model
 
 class Bombilla{
-    private var encendida: Boolean
-    //Constructor. Por defecto apagada
-    init {
-        encendida = false
-    }
-
+    private var encendida: Boolean = false
     fun encender() {
         encendida = true
     }
