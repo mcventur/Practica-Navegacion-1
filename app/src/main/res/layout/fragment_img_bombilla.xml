@@ -9,6 +9,7 @@
     android:padding="30dp">
 
     <ImageView
+        android:id="@+id/img_bombilla"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:src="@drawable/apagada"

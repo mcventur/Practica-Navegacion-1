@@ -8,25 +8,24 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_encender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Encender"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="0.5"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_apagar"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_apagar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Apagar"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btn_encender"
+        app:layout_constraintTop_toTopOf="@+id/btn_encender" />
 </androidx.constraintlayout.widget.ConstraintLayout>
